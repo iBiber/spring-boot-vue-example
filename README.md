@@ -13,4 +13,4 @@ Then you can start the spring-boot service with:
 `java -jar .\spring-boot-service\target\spring-boot-service-1.0-SNAPSHOT-exec.jar`
 
 After the service has been started, you can access the Vue-App with this link:  
-http://localhost:1099/ui/index.html
+http://localhost:8080/ui/index.html
