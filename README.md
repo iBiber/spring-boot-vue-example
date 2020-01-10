@@ -14,3 +14,9 @@ Then you can start the spring-boot service with:
 
 After the service has been started, you can access the Vue-App with this link:  
 http://localhost:8080/ui/index.html
+
+# How does it work?
+The Vue project will build the client artifacts into the folder `target/classes/static/ui` (see `vue.config.js` - `publicPath` and `outputDir`) and packaged as jar-file. This file will be included into the spring-boot service.  
+Files in that target-static folder will be served by spring-boot as static web resources.
+
+The vue-project is build by npm. Npm get installed and controlled by maven with the help of the eirslett maven plugin (see `vue-ui/pom.xml`). So it is not necessary to install node/npm on the build-machine / CI pipeline.
