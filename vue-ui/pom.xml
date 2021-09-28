@@ -38,7 +38,10 @@
                         <id>npm install</id>
                         <goals><goal>npm</goal></goals>
                         <phase>initialize</phase>
-                        <configuration><arguments>install</arguments></configuration>
+                           <!-- npm ci is similar to npm install, except it's meant to be used in automated environments such as test platforms, continuous integration, and deployment.
+                            Especially it will never write to package.json or any of the package-locks: installs are essentially frozen.
+                            See also https://docs.npmjs.com/cli/v6/commands/npm-ci -->
+                        <configuration><arguments>ci</arguments></configuration>
                     </execution>
 
                     <!-- (Optional) The following will output the npm configuration -->
